@@ -84,3 +84,9 @@ function updateDisplay() {
 document.addEventListener('DOMContentLoaded', (event) => {
     clearDisplay();
 });
+
+function backSpace() {
+    let bsp = document.getElementById("display").innerText;
+    document.getElementById('display').innerText=bsp.substring(0,bsp.length -1);
+    currentNumber = document.getElementById('display').innerText;
+}

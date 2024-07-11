@@ -45,7 +45,7 @@
     <div class="calculator">
         <div class="topp">
             <div class="display" id="display">0</div>
-            <button class="clear" id="clear" onclick="clearDisplay()">Clear</button>
+            <button class="clear" id="clear" onclick="backSpace()">Del</button>
     </div>
         
         <div class="buttons">
@@ -62,6 +62,7 @@
             <button onclick="appendNumber(3)">3</button>
             <button onclick="setOperation('-')">-</button>
             <button onclick="appendNumber(0)">0</button>
+            <button class="clear" id="clear" onclick="clearDisplay()">C</button>
             <button onclick="calculate()">=</button>
             <button onclick="setOperation('+')">+</button>
         </div>
