@@ -31,12 +31,14 @@ const operate = function (firstNumber, secondNumber, operator) {
             break;
         case '/':
             if (secondNumber === 0) {
-                return 'Error: Division by zero';
+                errorMessage('Error: Division by zero')
+                return 'Oops';
             }
             result = divide(firstNumber,secondNumber);
             break;
         default:
-            return 'Error: Invalid operator';
+            errorMessage('Error: Invalid operator');
+            return 'Oops';
     }
 
     return result;
@@ -89,4 +91,7 @@ function backSpace() {
     let bsp = document.getElementById("display").innerText;
     document.getElementById('display').innerText=bsp.substring(0,bsp.length -1);
     currentNumber = document.getElementById('display').innerText;
+}
+function errorMessage(message) {
+    document.getElementById('errorDisplay').innerText = message;
 }
